@@ -56,6 +56,14 @@ c.FargateSpawner.authentication_class = FargateSpawnerECSRoleAuthentication
 
 where FargateSpawnerECSRoleAuthentication does not have configurable options.
 
+_or_ authenticate using a role attached to EC2 instance, in which case you must have the following configuration
+
+```python
+from fargatespawner import FargateSpawnerEC2RoleAuthentication
+c.FargateSpawner.authentication_class = FargateSpawnerEC2RoleAuthentication
+```
+
+where FargateSpawnerEC2RoleAuthentication does not have configurable options.
 
 ## Run-time dependencies
 
