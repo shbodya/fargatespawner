@@ -63,7 +63,11 @@ from fargatespawner import FargateSpawnerEC2RoleAuthentication
 c.FargateSpawner.authentication_class = FargateSpawnerEC2RoleAuthentication
 ```
 
-where FargateSpawnerEC2RoleAuthentication does not have configurable options.
+_and_ the following settings on `c.FargateSpawnerEC2RoleAuthentication`
+
+| Setting | Description | Example |
+| --- | --- | --- |
+| `role_name` | The Name of the AWS IAM Role used to sign the requests to the AWS ECS API. | _ommitted_ |
 
 ## Run-time dependencies
 
